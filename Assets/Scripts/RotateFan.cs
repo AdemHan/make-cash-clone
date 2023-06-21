@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class RotateFan : MonoBehaviour
 {
-    public Vector3 rotation;
-    public float speed;
- 
+    public Vector3 rotation; // Fanýn dönme hýzý ve yönü
+    public float speed; // Fanýn dönme hýzý (derece/sn)
 
-    // Update is called once per frame
+    // Her frame'de çaðrýlýr, fanýn dönüþ hareketini gerçekleþtirir
     void Update()
     {
+        // Faný belirtilen hýzda ve belirtilen yönde döndürür. Time.deltaTime, her frame arasýndaki zaman farkýný hesaplamak için kullanýlýr.
         transform.Rotate(rotation * speed * Time.deltaTime);
     }
 }
